@@ -1,4 +1,4 @@
-import { Compass, Lock, Sparkles, ShieldCheck, Wallet, Leaf, Plus, Minus, Mail } from "lucide-react"
+import { Compass, Lock, Sparkles, ShieldCheck, Wallet, Users, Plus, Minus, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 
@@ -16,24 +16,24 @@ const Index = () => {
 
   const faqs: FAQ[] = [
     {
-      question: "Насколько физически сложен этот тур?",
+      question: "Нужен ли опыт вождения квадроцикла?",
       answer:
-        "Экспедиция в Скрытую Долину требует отличной физической подготовки. Вам предстоит пройти более 15 км по джунглям, спуститься по веревке с 80-метровой высоты и преодолеть подземные реки. Участники должны быть готовы нести рюкзак весом 15 кг и иметь опыт спелеологии или треккинга.",
+        "Нет, опыт не обязателен! Перед каждым туром мы проводим подробный инструктаж по управлению квадроциклом. Наши инструкторы быстро введут вас в курс дела — уже через 15 минут вы уверенно тронетесь в путь. Туры подходят для новичков и опытных водителей одинаково.",
     },
     {
       question: "Что входит в стоимость тура?",
       answer:
-        "В стоимость экспедиции включены все разрешения, профессиональные гиды, снаряжение для безопасности, палаточное оборудование, питание на маршруте, трансфер от базового лагеря и страховка экстренной эвакуации. Личные вещи, такие как одежда и средства гигиены, не включены.",
+        "В стоимость включены: квадроцикл (одно- или двухместный), защитная экипировка (шлем, перчатки, очки), инструктаж по безопасности, сопровождение опытного гида на всём маршруте и страховка. Доп. оплата только за профессиональную фотосъёмку по желанию.",
     },
     {
-      question: "Безопасно ли исследовать пещеру Скрытой Долины?",
+      question: "Безопасно ли это? Я еду с детьми.",
       answer:
-        "Безопасность — наш абсолютный приоритет. Все гиды — сертифицированные спасатели-спелеологи, мы используем профессиональное снаряжение, поддерживаем постоянную связь с базовым лагерем и имеем комплексные протоколы на случай ЧП. Погодные условия отслеживаются непрерывно.",
+        "Безопасность — наш главный приоритет. Мы используем современные квадроциклы с надёжной тормозной системой, каждый участник получает полный комплект защиты. Дети от 8 лет допускаются на маршрут в качестве пассажиров на двухместных квадроциклах. Маршруты выбраны специально с учётом безопасности.",
     },
     {
-      question: "Как забронировать место?",
+      question: "Как забронировать тур?",
       answer:
-        "Группы ограничены 10 участниками, экспедиции проводятся только в сухой сезон (февраль-август). Бронируйте за 6-12 месяцев через наш сайт. Предоплата 50% закрепляет ваше место, полная оплата — за 30 дней до выезда.",
+        "Оставьте заявку через форму на сайте или позвоните нам напрямую. Мы подберём удобное время и дату, согласуем состав группы. Группы формируются от 2 до 10 человек. Туры проводятся ежедневно с апреля по октябрь, а в хорошую погоду — круглый год.",
     },
   ]
 
@@ -45,7 +45,7 @@ const Index = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url(https://www.elledecoration.vn/wp-content/uploads/2025/03/1-son-doong.jpg)",
+            backgroundImage: "url(https://cdn.poehali.dev/projects/ce827be3-716d-4182-8f4e-757ed580d503/files/7bb06586-3a09-45d3-8a01-01f0d4a286d8.jpg)",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/80" />
@@ -56,12 +56,12 @@ const Index = () => {
           {/* Logo */}
           <div className="flex items-center gap-2 px-4 py-2 bg-black/40 ring-1 ring-white/20 backdrop-blur rounded-full">
             <Compass className="w-5 h-5" />
-            <span className="font-medium text-balance">Horizon Adventures</span>
+            <span className="font-medium text-balance">МотоПоход</span>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-1">
-            {["Экспедиция", "Безопасность", "Галерея", "Вопросы", "Контакты"].map((item) => (
+            {["Маршруты", "Безопасность", "Цены", "Вопросы", "Контакты"].map((item) => (
               <a
                 key={item}
                 href="#"
@@ -78,7 +78,7 @@ const Index = () => {
               href="#"
               className="px-4 py-2 bg-black/40 ring-1 ring-white/20 backdrop-blur rounded-full hover:bg-black/50 transition-colors"
             >
-              Войти
+              Позвонить
             </a>
             <Button className="bg-white text-black hover:bg-white/90 rounded-full px-6">Забронировать</Button>
           </div>
@@ -88,35 +88,35 @@ const Index = () => {
         <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-120px)] px-6 text-center">
           {/* Badge */}
           <div className="mb-6 px-4 py-2 bg-black/40 ring-1 ring-white/20 backdrop-blur rounded-full">
-            <span className="text-sm font-medium">Эксклюзивные групповые экспедиции</span>
+            <span className="text-sm font-medium">Туры на квадроциклах — Новороссийск и окрестности</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-6 text-balance">Войдите в затерянный мир.</h1>
+          <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-6 text-balance">Свобода без дорог.</h1>
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mb-12 leading-relaxed text-pretty">
-            Исследуйте грандиозные залы пещеры Скрытой Долины в Южной Америке — уникальную экосистему с собственными джунглями и погодой — в рамках 4-дневной экспедиции с гидом.
+            Захватывающие прогулки на квадроциклах по горам, лесам и побережью Новороссийска. Маршруты для любого уровня — от новичков до опытных водителей.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 py-4 text-lg">
-              Забронировать экспедицию
+              Забронировать тур
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="bg-black/40 ring-1 ring-white/20 backdrop-blur border-0 text-white hover:bg-black/50 rounded-full px-8 py-4 text-lg"
             >
-              Смотреть маршрут
+              Смотреть маршруты
             </Button>
           </div>
 
           {/* Footer Note */}
           <div className="flex items-center gap-2 px-4 py-2 bg-black/40 ring-1 ring-white/20 backdrop-blur rounded-full">
             <Lock className="w-4 h-4" />
-            <span className="text-sm font-medium">Безопасность — наш приоритет</span>
+            <span className="text-sm font-medium">Полная экипировка и инструктаж включены</span>
           </div>
         </div>
       </div>
@@ -125,40 +125,40 @@ const Index = () => {
       <section className="relative z-10 py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-            {/* Expert-Led Tours */}
+            {/* Expert Guides */}
             <div className="rounded-2xl bg-black/20 ring-1 ring-white/15 backdrop-blur p-8 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black/30 ring-1 ring-white/20 mb-6">
                 <Sparkles className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Туры с экспертами</h3>
-              <p className="text-white/80 leading-relaxed">Ведут геологи, спелеологи и местные специалисты.</p>
+              <h3 className="text-xl font-semibold mb-4">Опытные гиды</h3>
+              <p className="text-white/80 leading-relaxed">Каждый тур ведёт сертифицированный инструктор, знающий каждый камень на маршруте.</p>
             </div>
 
-            {/* World-Class Safety */}
+            {/* Safety */}
             <div className="rounded-2xl bg-black/20 ring-1 ring-white/15 backdrop-blur p-8 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black/30 ring-1 ring-white/20 mb-6">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Мировой уровень безопасности</h3>
-              <p className="text-white/80 leading-relaxed">Строгие протоколы и современное снаряжение.</p>
+              <h3 className="text-xl font-semibold mb-4">Безопасность прежде всего</h3>
+              <p className="text-white/80 leading-relaxed">Современные квадроциклы, полная защитная экипировка и страхование каждого участника.</p>
             </div>
 
-            {/* All-Inclusive Package */}
+            {/* All Inclusive */}
             <div className="rounded-2xl bg-black/20 ring-1 ring-white/15 backdrop-blur p-8 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black/30 ring-1 ring-white/20 mb-6">
                 <Wallet className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Все включено</h3>
-              <p className="text-white/80 leading-relaxed">Разрешения, снаряжение, питание и трансфер.</p>
+              <h3 className="text-xl font-semibold mb-4">Всё включено</h3>
+              <p className="text-white/80 leading-relaxed">Квадроцикл, экипировка, инструктаж и сопровождение — никаких скрытых доплат.</p>
             </div>
 
-            {/* Eco-Friendly Caving */}
+            {/* Groups & Families */}
             <div className="rounded-2xl bg-black/20 ring-1 ring-white/15 backdrop-blur p-8 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black/30 ring-1 ring-white/20 mb-6">
-                <Leaf className="w-6 h-6" />
+                <Users className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Эко-спелеология</h3>
-              <p className="text-white/80 leading-relaxed">Мы бережно сохраняем экосистему пещеры.</p>
+              <h3 className="text-xl font-semibold mb-4">Группы и семьи</h3>
+              <p className="text-white/80 leading-relaxed">Корпоративы, дни рождения, семейный отдых — организуем тур под любой формат.</p>
             </div>
           </div>
         </div>
@@ -170,54 +170,54 @@ const Index = () => {
           <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-12">
             {/* Section Header */}
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">Ваше эпическое путешествие</h2>
+              <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">Ваш маршрут</h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto text-pretty">
-                От джунглей до подземных лагерей — вот что вас ждет.
+                От старта до финиша — вот как проходит ваше приключение на квадроцикле.
               </p>
             </div>
 
             {/* Journey Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-              {/* Phase 1: Briefing & Prep */}
+              {/* Phase 1 */}
               <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-8 h-80 flex flex-col">
                 <div className="flex-1">
                   <div className="text-3xl font-bold text-white/60 mb-4">01.</div>
-                  <h3 className="text-xl font-semibold mb-4">Инструктаж</h3>
+                  <h3 className="text-xl font-semibold mb-4">Сбор и инструктаж</h3>
                   <p className="text-white/80 leading-relaxed text-sm">
-                    Ваше приключение начинается в базовом лагере с полного инструктажа по безопасности и проверки снаряжения.
+                    Встречаемся на базе, выдаём экипировку и проводим инструктаж по технике безопасности и управлению квадроциклом.
                   </p>
                 </div>
               </div>
 
-              {/* Phase 2: The Trek */}
+              {/* Phase 2 */}
               <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-8 h-80 flex flex-col">
                 <div className="flex-1">
                   <div className="text-3xl font-bold text-white/60 mb-4">02.</div>
-                  <h3 className="text-xl font-semibold mb-4">Треккинг</h3>
+                  <h3 className="text-xl font-semibold mb-4">Выезд на маршрут</h3>
                   <p className="text-white/80 leading-relaxed text-sm">
-                    Идите через нетронутые джунгли, пересекайте реки и ночуйте в удаленных точках по пути ко входу в Скрытую Долину.
+                    Стартуем колонной под руководством гида. Горные тропы, лесные просеки и живописные видовые площадки ждут вас.
                   </p>
                 </div>
               </div>
 
-              {/* Phase 3: Caving */}
+              {/* Phase 3 */}
               <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-8 h-80 flex flex-col">
                 <div className="flex-1">
                   <div className="text-3xl font-bold text-white/60 mb-4">03.</div>
-                  <h3 className="text-xl font-semibold mb-4">Спелеология</h3>
+                  <h3 className="text-xl font-semibold mb-4">Панорамные точки</h3>
                   <p className="text-white/80 leading-relaxed text-sm">
-                    Спуститесь в пещеру, чтобы увидеть гигантские сталагмиты, исследовать огромные залы и уникальные подземные джунгли.
+                    Остановки в самых красивых местах — виды на Чёрное море, Новороссийскую бухту и горные хребты Кавказа.
                   </p>
                 </div>
               </div>
 
-              {/* Phase 4: Base Camp */}
+              {/* Phase 4 */}
               <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-8 h-80 flex flex-col">
                 <div className="flex-1">
                   <div className="text-3xl font-bold text-white/60 mb-4">04.</div>
-                  <h3 className="text-xl font-semibold mb-4">Базовый лагерь</h3>
+                  <h3 className="text-xl font-semibold mb-4">Финиш и фото</h3>
                   <p className="text-white/80 leading-relaxed text-sm">
-                    Проведите ночи на потрясающих стоянках внутри пещеры, делясь историями с группой перед обратным путем.
+                    Возвращаемся на базу. Делимся впечатлениями, получаем фотографии с маршрута и памятный сертификат участника.
                   </p>
                 </div>
               </div>
@@ -229,7 +229,7 @@ const Index = () => {
                 size="lg"
                 className="bg-white text-black hover:bg-white/90 rounded-full px-12 py-4 text-lg font-semibold"
               >
-                Проверить наличие мест
+                Узнать свободные даты
               </Button>
             </div>
           </div>
@@ -247,7 +247,7 @@ const Index = () => {
                   Частые вопросы
                 </h2>
                 <p className="text-xl text-white/80 leading-relaxed text-pretty">
-                  Все, что нужно знать об экспедиции: от физических требований до бронирования места в этом эксклюзивном приключении.
+                  Всё, что нужно знать перед поездкой — от подготовки до бронирования.
                 </p>
               </div>
 
@@ -294,7 +294,7 @@ const Index = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               {/* Left Column - Contact Form */}
               <div className="rounded-2xl bg-white/95 text-black p-8 shadow-2xl">
-                <h3 className="text-2xl font-bold mb-6">Отправить запрос</h3>
+                <h3 className="text-2xl font-bold mb-6">Оставить заявку</h3>
                 <form className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -304,33 +304,33 @@ const Index = () => {
                       type="text"
                       id="name"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Ваше полное имя"
+                      placeholder="Ваше имя"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email
+                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                      Телефон
                     </label>
                     <input
-                      type="email"
-                      id="email"
+                      type="tel"
+                      id="phone"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="your.email@example.com"
+                      placeholder="+7 (___) ___-__-__"
                     />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Сообщение
+                      Пожелания
                     </label>
                     <textarea
                       id="message"
-                      rows={5}
+                      rows={4}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                      placeholder="Расскажите о ваших интересах в экспедиции..."
+                      placeholder="Количество человек, желаемая дата, вопросы..."
                     />
                   </div>
                   <Button className="w-full bg-black text-white hover:bg-gray-800 rounded-lg py-3 font-normal text-base">
-                    Отправить сообщение
+                    Отправить заявку
                   </Button>
                 </form>
               </div>
@@ -339,21 +339,19 @@ const Index = () => {
               <div className="space-y-8">
                 <div>
                   <p className="text-xl text-white/90 leading-relaxed text-pretty">
-                    По вопросам индивидуальных туров, партнерства или для СМИ — свяжитесь с нами. Мы отвечаем в течение одного рабочего дня.
+                    Хотите задать вопрос, узнать о групповых скидках или организовать корпоратив? Напишите нам — ответим в течение часа.
                   </p>
                 </div>
 
-                {/* Profile Card */}
+                {/* Contact Card */}
                 <div className="rounded-2xl bg-white/95 text-black p-6 shadow-2xl">
                   <div className="flex items-center gap-4 mb-4">
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-                      alt="Маркус Уильямс"
-                      className="w-16 h-16 rounded-full object-cover"
-                    />
+                    <div className="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-white text-2xl font-bold">
+                      А
+                    </div>
                     <div>
-                      <h4 className="text-lg font-semibold">Маркус Уильямс</h4>
-                      <p className="text-gray-600">Руководитель экспедиций</p>
+                      <h4 className="text-lg font-semibold">Алексей</h4>
+                      <p className="text-gray-600">Руководитель туров</p>
                     </div>
                   </div>
                   <Button className="w-full bg-black text-white hover:bg-gray-800 rounded-lg flex items-center justify-center gap-2">
@@ -377,18 +375,18 @@ const Index = () => {
               <div className="lg:col-span-2">
                 <div className="flex items-center gap-2 mb-6">
                   <Compass className="w-6 h-6" />
-                  <span className="text-xl font-semibold">Horizon Adventures</span>
+                  <span className="text-xl font-semibold">МотоПоход</span>
                 </div>
                 <p className="text-white/80 leading-relaxed text-pretty">
-                  Официальный туроператор экспедиций в Скрытую Долину — крупнейшую пещеру мира. Мы преданы безопасности, охране природы и незабываемым приключениям.
+                  Туры на квадроциклах по горам и побережью Новороссийска. Незабываемые приключения для всей семьи, компаний и корпоративных групп.
                 </p>
               </div>
 
-              {/* Expedition Links */}
+              {/* Tour Links */}
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-wider mb-6">ЭКСПЕДИЦИЯ</h3>
+                <h3 className="text-sm font-bold uppercase tracking-wider mb-6">ТУРЫ</h3>
                 <ul className="space-y-3">
-                  {["Маршрут", "Цены", "Список снаряжения", "Фотогалерея"].map((item) => (
+                  {["Маршруты", "Цены", "Расписание", "Фотогалерея"].map((item) => (
                     <li key={item}>
                       <a href="#" className="text-white/70 hover:text-white transition-colors text-sm leading-relaxed">
                         {item}
@@ -402,7 +400,7 @@ const Index = () => {
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-wider mb-6">О НАС</h3>
                 <ul className="space-y-3">
-                  {["Наша миссия", "Стандарты безопасности", "Команда", "Охрана природы"].map((item) => (
+                  {["Наша команда", "Безопасность", "Отзывы", "Партнёрам"].map((item) => (
                     <li key={item}>
                       <a href="#" className="text-white/70 hover:text-white transition-colors text-sm leading-relaxed">
                         {item}
@@ -412,11 +410,11 @@ const Index = () => {
                 </ul>
               </div>
 
-              {/* Resources Links */}
+              {/* Support Links */}
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-wider mb-6">ПОДДЕРЖКА</h3>
                 <ul className="space-y-3">
-                  {["Справочный центр", "Контакты", "Вопросы и ответы", "Условия"].map((item) => (
+                  {["Частые вопросы", "Контакты", "Правила участия", "Условия"].map((item) => (
                     <li key={item}>
                       <a href="#" className="text-white/70 hover:text-white transition-colors text-sm leading-relaxed">
                         {item}
@@ -430,7 +428,7 @@ const Index = () => {
             {/* Newsletter Section */}
             <div className="border-t border-white/10 pt-12 mb-12">
               <div className="max-w-md">
-                <h3 className="text-lg font-semibold mb-4">Новости экспедиций</h3>
+                <h3 className="text-lg font-semibold mb-4">Новые маршруты и акции</h3>
                 <div className="flex gap-3">
                   <input
                     type="email"
@@ -444,7 +442,7 @@ const Index = () => {
 
             {/* Sub-footer */}
             <div className="border-t border-white/10 pt-8">
-              <p className="text-white/60 text-sm text-center">© 2025 Horizon Adventures</p>
+              <p className="text-white/60 text-sm text-center">© 2025 МотоПоход — Туры на квадроциклах, Новороссийск</p>
             </div>
           </div>
         </div>
