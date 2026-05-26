@@ -101,9 +101,11 @@ const Index = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 py-4 text-lg">
-              Забронировать тур
-            </Button>
+            <a href="https://t.me/quadronova" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 py-4 text-lg">
+                Забронировать тур
+              </Button>
+            </a>
             <Button
               size="lg"
               variant="outline"
