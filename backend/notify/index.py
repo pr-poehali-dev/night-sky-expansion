@@ -2,7 +2,7 @@ import json
 import os
 import urllib.request
 
-CHAT_ID = "@kvadronovo"  # канал для уведомлений
+CHAT_ID = "@kvadronovo"
 
 
 def handler(event: dict, context) -> dict:
