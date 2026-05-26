@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "Send booking notification",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Тест Тестов",
+        "phone": "+7 999 000 00 00",
+        "date": "2026-06-01",
+        "time": "12:00",
+        "message": "Тестовая заявка"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {"ok": true},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
