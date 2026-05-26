@@ -344,20 +344,34 @@ const Index = () => {
                 </div>
 
                 {/* Contact Card */}
-                <div className="rounded-2xl bg-white/95 text-black p-6 shadow-2xl">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-white text-2xl font-bold">
-                      А
+                <div className="rounded-2xl bg-white/95 text-black p-6 shadow-2xl space-y-3">
+                  <a href="tel:+79184411331" className="flex items-center gap-3 hover:opacity-70 transition-opacity">
+                    <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold">Алексей</h4>
-                      <p className="text-gray-600">Руководитель туров</p>
+                      <p className="text-xs text-gray-500">Телефон 1</p>
+                      <p className="font-semibold">+7 918 44 11 331</p>
                     </div>
-                  </div>
-                  <Button className="w-full bg-black text-white hover:bg-gray-800 rounded-lg flex items-center justify-center gap-2">
-                    <Mail className="w-4 h-4" />
-                    Написать
-                  </Button>
+                  </a>
+                  <a href="tel:+79884730006" className="flex items-center gap-3 hover:opacity-70 transition-opacity">
+                    <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500">Телефон 2</p>
+                      <p className="font-semibold">+7 988 473 00 06</p>
+                    </div>
+                  </a>
+                  <a href="https://t.me/quadronova" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-70 transition-opacity">
+                    <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.947l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.978.612z"/></svg>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500">Telegram</p>
+                      <p className="font-semibold">t.me/quadronova</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
